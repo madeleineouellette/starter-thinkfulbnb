@@ -28,6 +28,7 @@ section {
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
+
 }
 
 main img {
@@ -107,9 +108,13 @@ nav {
 form {
   display: flex;
   flex-direction: column;
-  border: 4px solid #ff385c;
+  border: 2px solid #ff385c;
   padding: 20px;
-  justify-content: flex-end;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 .item > label {
@@ -144,10 +149,7 @@ form button {
   width: 100%;
 }
 
-.ideas {
-  background-color: #fff;
-  color: black;
-}
+
 
 /* -------  Footer ------- */
 
@@ -163,10 +165,13 @@ footer p {
 
 /* -------  Media Query ------- */
 
+
+
 @media all and (min-width: 480px){
   section {
-    padding: 0 10%
+    padding: 20px 20px 20px 20px;
   }
+
 
   .group {
     display: flex;
@@ -179,12 +184,13 @@ footer p {
   .item {
     flex: 1;
     flex-direction: row;
-    margin: 10px;
-    align-items: space-evenly;
+    margin: 20px;
+    align-items: space-between;
+    flex-grow: 3;
   } 
 
-.item-double {
-    flex: 1;
+  .item-double {
+    flex: 1.5;
     flex-direction: row;
     margin: 10px;
     align-items: space-evenly;
@@ -196,16 +202,34 @@ footer p {
     justify-content: space-between;
   }
 
-  .menu {
-    display: flex;
-    flex-direction: row;
+  form button {
+    background-color: #ff385c;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    width: 100%;
   }
 
-  form {
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
-  }
+form {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #ff385c;
+  padding: 20px;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.stay-form {
+  flex-direction: column;
+}
 
   .logo {
     display: flex;
@@ -257,5 +281,4 @@ footer p {
     flex-direction: row;
   }
 
-    
 }
